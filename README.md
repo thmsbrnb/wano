@@ -27,7 +27,7 @@ For demonstrative purposes.
 -   SEO friendly.
 -   Browsers compatible.
 
-Piece of code :
+Pieces of the cake :
 
 ```twig
 <nav class="nav is-main" arial-label="main">
