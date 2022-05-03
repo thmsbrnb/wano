@@ -2,12 +2,12 @@
 
 For demonstrative purposes.
 
-![Mockup](assets/docs/mockup_desktop.png)
-![Mockup](assets/docs/mockup_mobile.png =253x117)
-
 ## **`🐒 What is WANO ?`**
 
 **WANO** is a market place for collecting NFTs and digital artworks. The application allows you to explore a wide range of works, become a creator and get in touch with the **WANO** community.
+
+![Mockup](assets/docs/mockup_desktop.png)
+![Mockup](assets/docs/mockup_mobile.png = 253x117)
 
 ## **`🚀 Challenge`**
 
