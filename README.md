@@ -12,7 +12,7 @@ For demonstrative purposes.
 
 1- Produce the desktop version from a given graphic model (https://dribbble.com/shots/18115431-NFTs-Landing-Page).
 
-2 - Design the mobile version (bottom navigation, vertical layer, horizontal scrollers, etc...) and implement responsive functions.
+2 - Design the unexistant mobile version (bottom navigation, vertical layer, horizontal scrollers, etc...) and implement responsive functions.
 
 3 - Animate the application with simple JS functions (header, bottom navigation, modals, etc ...).
 
