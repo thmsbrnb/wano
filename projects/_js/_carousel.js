@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
     // Get item position from its width :
     const setItemPosition = (slide, index) => {
-        slide.style.left = itemWidth * index + "px";
+        slide.style.left = 100 * index + "vw";
     };
 
     item.forEach(setItemPosition);
