@@ -2,6 +2,8 @@
 
 For demonstrative purposes.
 
+Inspo : https://dribbble.com/shots/18115431-NFTs-Landing-Page
+
 ## **`🐒 What is WANO ?`**
 
 **WANO** is a market place for collecting NFTs and digital artworks. The application allows you to explore a wide range of works, become a creator and get in touch with the **WANO** community.
