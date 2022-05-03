@@ -22,7 +22,7 @@ Inspo : https://dribbble.com/shots/18115431-NFTs-Landing-Page
 
 ## **`⚙️ Technical approach`**
 
--   Stack : `GulpJS` `Twig` `Sass` `ES6`.
+-   `GulpJS` `Twig` `Sass` `ES6`.
 -   Mobile first.
 -   Responsive design.
 -   Reusable components (buttons, tabs, sections, ... ).
