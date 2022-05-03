@@ -1,0 +1,50 @@
+.section {
+    &.is-marketplace {
+        .section_head {
+            margin-bottom: 6rem;
+            flex-direction: column;
+            @include flex-between-center;
+        }
+
+        .section_title,
+        .section_subtitle {
+            width: 100%;
+        }
+
+        .section_title {
+            margin-bottom: 1.6rem;
+        }
+
+        .section_content {
+            text-align: center;
+        }
+
+        .btn {
+            margin-top: 4rem;
+        }
+    }
+}
+
+// Responsive
+// ----------------------------------------
+// Devices > 960px
+@include smallDesktop {
+    .section {
+        &.is-marketplace {
+            margin-top: 12rem;
+
+            .section_head {
+                flex-direction: row;
+            }
+
+            .section_title {
+                margin-bottom: 0;
+                width: calc(math.div(100%, 3) * 2);
+            }
+
+            .section_subtitle {
+                width: math.div(100%, 3);
+            }
+        }
+    }
+}

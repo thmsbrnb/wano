@@ -1,0 +1,98 @@
+.section {
+    &.is-home {
+        padding-top: 0;
+
+        .section_container {
+            padding-top: #{$headerHeight + 4rem};
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
+            height: 100vh;
+        }
+
+        .section_content {
+            h1 {
+                text-transform: capitalize;
+                line-height: 1.3;
+                font-size: 4rem;
+
+                .sheperd {
+                    &:after {
+                        bottom: -1.6rem;
+                        right: -7rem;
+                        background: url("../../../assets/icons/icon_sparkle.png")
+                            no-repeat;
+                        background-size: cover;
+                    }
+                }
+            }
+
+            h2 {
+                margin: 3rem 0 4rem;
+                font-size: 1.6rem;
+                @include font-regular;
+            }
+        }
+    }
+}
+
+// Responsive
+// ----------------------------------------
+// Devices > 720px
+@include largeTablet {
+    .section {
+        &.is-home {
+            .section_container {
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: 1fr;
+            }
+
+            .section_content {
+                h2 {
+                    width: calc(math.div(100%, 3) * 2);
+                }
+            }
+        }
+    }
+}
+
+// Devices > 960px
+@include smallDesktop {
+    .section {
+        &.is-home {
+            .section_container {
+                padding-top: #{$headerHeight + 6rem};
+            }
+
+            .section_content {
+                h1 {
+                    line-height: 1.2;
+                    font-size: 5rem;
+                }
+            }
+        }
+    }
+}
+
+// Devices > 1280px
+@include largeDesktop {
+    .section {
+        &.is-home {
+            .section_content {
+                h1 {
+                    font-size: 6rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .section {
+        &.is-home {
+            .section_container {
+                padding-top: #{$headerHeight};
+            }
+        }
+    }
+}

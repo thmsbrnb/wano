@@ -1,0 +1,34 @@
+.layout {
+    .layout_container {
+        padding: 0 1.4rem;
+    }
+}
+
+// Responsive
+// ----------------------------------------
+// Devices > 560px
+@include smallTablet {
+    .layout {
+        .layout_container {
+            padding: 0 2rem;
+        }
+    }
+}
+
+// Devices > 720px
+@include largeTablet {
+    .layout {
+        .layout_container {
+            padding: 0 6rem;
+        }
+    }
+}
+
+// Devices > 1280px
+@include largeDesktop {
+    .layout {
+        .layout_container {
+            padding: 0 12rem;
+        }
+    }
+}

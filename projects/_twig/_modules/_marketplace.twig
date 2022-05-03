@@ -1,0 +1,58 @@
+{% set card_items = [
+    {
+        "title": "monkey#93",
+        "author": "mark",
+        "img": "../../assets/previews/nft_1.webp",
+        "bid": "0.0334",
+        "time": "04:12:24",
+        "css_class": "is-dynamic"
+    },
+    {
+        "title": "monkey#12",
+        "author": "mark",
+        "img": "../../assets/previews/nft_2.webp",
+        "bid": "0.0624",
+        "time": "04:24:25",
+        "css_class": "is-dynamic"
+    },
+    {
+        "title": "monkey#43",
+        "author": "mark",
+        "img": "../../assets/previews/nft_3.webp",
+        "bid": "0.0224",
+        "time": "06:03:23",
+        "css_class": "is-dynamic"
+    },
+    {
+        "title": "monkuy",
+        "author": "maks",
+        "img": "../../assets/previews/nft_4.webp",
+        "bid": "1.0324",
+        "time": "08:35:11",
+        "css_class": "is-dynamic"
+    },
+    {
+        "title": "monks",
+        "author": "mahlah",
+        "img": "../../assets/previews/nft_5.webp",
+        "bid": "1.0624",
+        "time": "10:34:21",
+        "css_class": "is-dynamic"
+    },
+    {
+        "title": "monksblvk",
+        "author": "mahlah",
+        "img": "../../assets/previews/nft_6.webp",
+        "bid": "1.0303",
+        "time": "12:43:44",
+        "css_class": "is-dynamic"
+    }
+] %}
+
+<div class="mp">
+    <div class="mp_container">
+        {% for item in card_items %}
+            {% include "../_modules/_cards.twig" with "item": item %}
+        {% endfor %}
+    </div>
+</div>

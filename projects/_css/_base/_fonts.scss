@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+
+@mixin font-primary {
+    font-family: "Space Mono", monospace;
+    letter-spacing: 0.04rem;
+}
+
+// Weight
+// ----------------------------------------
+@mixin font-bold {
+    font-weight: 700;
+}
+@mixin font-regular {
+    font-weight: 400;
+}
+@mixin font-regular-italic {
+    font-weight: 400;
+    font-style: italic;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    @include font-primary;
+    @include font-regular;
+    -webkit-font-smoothing: antialiased;
+}
+
+.is-bold {
+    @include font-bold;
+}
+
+.emoji {
+    font-weight: normal;
+    font-style: normal;
+}

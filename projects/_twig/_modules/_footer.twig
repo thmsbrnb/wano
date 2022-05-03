@@ -1,0 +1,123 @@
+{% set social_items = [
+    {
+        "title": "Twitter",
+        "link": "http://www.twitter.com",
+        "icon": "fa-brands fa-twitter"
+    },
+    {
+        "title": "Linkedin",
+        "link": "http://www.linkedin.com",
+        "icon": "fa-brands fa-linkedin-in"
+    },
+    {
+        "title": "Github",
+        "link": "http://www.github.com",
+        "icon": "fa-brands fa-github"
+    },
+    {
+        "title": "Discord",
+        "link": "http://www.discord.com",
+        "icon": "fa-brands fa-discord"
+    },
+    {
+        "title": "YouTube",
+        "link": "http://www.youtube.com",
+        "icon": "fa-brands fa-youtube"
+    }
+] %}
+
+{% set list_items = [
+    {
+        "title": "Marketplace",
+        "items": [
+            {
+                "label": "All NFTs"
+            },
+            {
+                "label": "Collectibles"
+            },
+            {
+                "label": "Photography"
+            },
+            {
+                "label": "Trading Cards"
+            }
+        ]
+    },
+    {
+        "title": "Statistics",
+        "items": [
+            {
+                "label": "Rankings"
+            },
+            {
+                "label": "Activity"
+            }
+        ]
+    },
+    {
+        "title": "Ressources",
+        "items": [
+            {
+                "label": "Help Center"
+            },
+            {
+                "label": "Partners"
+            },
+            {
+                "label": "Docs"
+            },
+            {
+                "label": "Newsletter"
+            }
+        ]
+    },
+    {
+        "title": "Company",
+        "items": [
+            {
+                "label": "About us"
+            },
+            {
+                "label": "Careers"
+            },
+            {
+                "label": "Contact us"
+            }
+        ]
+    },
+] %}
+
+<footer class="footer">
+    <div class="footer_container">
+        <div class="footer_section">
+            <div class="logo is-secondary">
+                <div class="logo_container">
+                    wano
+                </div>
+            </div>
+            <p class="footer_txt">
+                The world's first and largest digital marketplace for
+                crypto collectibles and non-fungible tokens (NFTs).
+                Buy, sell and discover exclusive digital items.
+            </p>
+            <div class="list is-socials">
+                {% for item in social_items %}
+                    <a href="{{ item.link }}" class="list_item" title="{{ item.title }}" target="_blank">
+                        <i class="{{ item.icon }}"></i>
+                    </a>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="footer_section">
+            {% for item in list_items %}
+                <div class="list is-utils">
+                    <div class="list_title">{{ item.title }}</div>
+                    {% for i in item.items %}
+                        <a href="#!" class="list_item" title="{{ i.label }}">{{ i.label }}</a>
+                    {% endfor %}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</footer>

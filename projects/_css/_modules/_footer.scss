@@ -1,0 +1,143 @@
+.footer {
+    .footer_container {
+        padding-bottom: $navMobileHeight;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    .footer_section {
+        padding: 8rem 0;
+
+        &:last-child {
+            padding-top: 0;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    .footer_txt {
+        margin: 2.8rem 0;
+        font-size: 1.2rem;
+    }
+
+    .list {
+        &.is-socials {
+            display: flex;
+            align-items: center;
+            gap: 1.4rem;
+
+            $listItem: 3.6rem;
+
+            .list_item {
+                width: $listItem;
+                height: $listItem;
+                border-radius: 100%;
+                font-size: 1.8rem;
+                color: $white;
+                background: $black;
+                @include flex-center-center;
+
+                &:nth-child(3) {
+                    background: transparent;
+                }
+
+                .fa-github {
+                    font-size: $listItem;
+                    color: $black;
+                }
+            }
+        }
+
+        &.is-utils {
+            width: fit-content;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+
+            .list_title {
+                font-size: 1.2rem;
+                @include font-bold;
+            }
+
+            .list_item {
+                font-size: 1rem;
+            }
+        }
+    }
+}
+
+// Responsive
+// ----------------------------------------
+// Devices >560px
+@include smallTablet {
+    .footer {
+        .list {
+            &.is-utils {
+                .list_title {
+                    font-size: 1.6rem;
+                }
+
+                .list_item {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+}
+// Devices > 960px
+@include smallDesktop {
+    .footer {
+        .footer_container {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 1fr;
+        }
+
+        .footer_section {
+            padding-bottom: 0;
+
+            &:first-child {
+                padding-right: 4rem;
+            }
+
+            &:last-child {
+                padding-top: 8rem;
+            }
+        }
+
+        .list {
+            &.is-socials {
+                gap: 1rem;
+
+                $listItemDesktop: 2.4rem;
+
+                .list_item {
+                    width: $listItemDesktop;
+                    height: $listItemDesktop;
+                    font-size: 1.4rem;
+
+                    .fa-github {
+                        font-size: $listItemDesktop;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Devices > 360px
+@media screen and (max-width: 360px) {
+    .footer {
+        .list {
+            &.is-utils {
+                .list_title {
+                    font-size: 1rem;
+                }
+
+                .list_item {
+                    font-size: 0.8rem;
+                }
+            }
+        }
+    }
+}

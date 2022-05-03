@@ -1,0 +1,62 @@
+{% set section = {
+    "value": "marketplace"
+} %}
+
+{% set button = {
+    "label": "see all",
+    "css_class": "is-primary"
+} %}
+
+{% set tabs_items = [
+    {
+        "label": "art",
+        "css_class": "is-primary"
+    },
+    {
+        "label": "collectibles",
+        "css_class": "is-primary",
+        "is_active": "is-active"
+    },
+    {
+        "label": "gaming",
+        "css_class": "is-primary"
+    },
+    {
+        "label": "sports",
+        "css_class": "is-primary"
+    },
+    {
+        "label": "photography",
+        "css_class": "is-primary"
+    },
+    {
+        "label": "music",
+        "css_class": "is-primary"
+    },
+    {
+        "label": "virtual worlds",
+        "css_class": "is-primary"
+    },
+    {
+        "label": "+ more",
+        "css_class": "is-primary"
+    }
+] %}
+
+<section class="section{{ section.value ? " is-" ~ section.value : "" }}" aria-label="{{ section.value ? section.value : "" }}" id="{{ section.value ? section.value : "" }}">
+    <div class="section_container">
+        <div class="section_head">
+            <h1 class="section_title">
+                explore marketplace
+            </h1>
+            <h2 class="section_subtitle">
+                Find what you are looking for among a wide choice of exclusive NFTs. 
+            </h2>
+        </div>
+        <div class="section_content">
+            {% include "../_components/_xScroller.twig" %}
+            {% include "../_modules/_marketplace.twig" %}
+            {% include "../_components/_button.twig" with button %}
+        </div>
+    </div>
+</section>

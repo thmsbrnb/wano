@@ -1,0 +1,88 @@
+.carousel {
+    margin-inline: auto;
+    position: relative;
+    width: 100%;
+    aspect-ratio: 3 / 2;
+
+    .carousel_container {
+        position: relative;
+        overflow: hidden;
+        height: 100%;
+        border-radius: 0.2rem;
+    }
+
+    .carousel_list {
+        position: relative;
+        height: 100%;
+        transition: transform $time2 $ease1;
+    }
+
+    .carousel_item {
+        position: absolute;
+        top: 0%;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .carousel_itemContent {
+        z-index: 1;
+    }
+
+    .carousel_itemTitle {
+        margin-bottom: 2rem;
+        text-transform: capitalize;
+        font-size: 2.4rem;
+        @include font-bold;
+    }
+
+    .carousel_itemText {
+        font-size: 1.4rem;
+    }
+
+    .carousel_tracker {
+        margin-bottom: 4rem;
+        @include flex-center-center;
+    }
+
+    .carousel_trackerBtn {
+        margin-inline: 1rem;
+        position: relative;
+        width: 5.8rem;
+        aspect-ratio: 1;
+        border-radius: 100%;
+        border: 0.2rem solid $black;
+        background: transparent;
+        @include transition(all, $time2);
+
+        &:hover {
+            background: rgba($black, 0.1);
+        }
+
+        &.is-active {
+            color: $white;
+            background: $black;
+        }
+
+        &:not(:last-child) {
+            &:before {
+                content: "";
+                position: absolute;
+                top: 50%;
+                right: -1.8rem;
+                transform: translateY(-50%);
+                width: 1.2rem;
+                height: 0.2rem;
+                background: $black;
+            }
+        }
+    }
+}
+
+// Responsive
+// ----------------------------------------
+@include smallDesktop {
+    .carousel {
+        width: 38rem;
+    }
+}

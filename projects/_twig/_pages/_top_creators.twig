@@ -1,0 +1,98 @@
+{% set section = {
+    "value": "topCreators"
+} %}
+
+{% set tabs_items = [
+    {
+        "label": "i'm_blue",
+        "info": "10.043+ items",
+        "img" : "../../assets/avatars/avatar_1.jpeg",
+        "css_class": "is-secondary"
+    },
+    {
+        "label": "john_dougth",
+        "info": "20.600+ items",
+        "img" : "../../assets/avatars/avatar_4.jpeg",
+        "css_class": "is-secondary"
+    },
+    {
+        "label": "skan2098",
+        "info": "10.023+ items",
+        "img" : "../../assets/avatars/avatar_12.jpeg",
+        "css_class": "is-secondary"
+    },
+    {
+        "label": "spvrkle",
+        "info": "9.847+ items",
+        "img" : "../../assets/avatars/avatar_2.webp",
+        "css_class": "is-secondary"
+    },
+    {
+        "label": "mark",
+        "info": "22.490+ items",
+        "premium": true,
+        "img" : "../../assets/avatars/avatar_11.webp",
+        "css_class": "is-secondary"
+    },
+    {
+        "label": "pacers330",
+        "info": "13.009+ items",
+        "img" : "../../assets/avatars/avatar_5.png",
+        "css_class": "is-secondary"
+    },
+    {
+        "label": "nft_guru",
+        "info": "23.954+ items",
+        "premium": true,
+        "img" : "../../assets/avatars/avatar_3.jpeg",
+        "css_class": "is-secondary"
+    },
+    {
+        "label": "max444",
+        "info": "11.982+ items",
+        "img" : "../../assets/avatars/avatar_7.webp",
+        "css_class": "is-secondary"
+    },
+    {
+        "label": "thunder",
+        "info": "7.865+ items",
+        "img" : "../../assets/avatars/avatar_8.jpeg",
+        "css_class": "is-secondary"
+    },
+    {
+        "label": "ugly people",
+        "info": "10.634+ items",
+        "img" : "../../assets/avatars/avatar_9.webp",
+        "css_class": "is-secondary"
+    },
+    {
+        "label": "22savage",
+        "info": "8.836+ items",
+        "premium": true,
+        "img" : "../../assets/avatars/avatar_10.jpeg",
+        "css_class": "is-secondary"
+    },
+    {
+        "label": "UNI",
+        "info": "11.039+ items",
+        "img" : "../../assets/avatars/avatar_6.jpeg",
+        "css_class": "is-secondary"
+    }
+] %}
+
+<section class="section{{ section.value ? " is-" ~ section.value : "" }}" aria-label="{{ section.value ? section.value : "" }}" id="{{ section.value ? section.value : "" }}">
+    <div class="section_container">
+        <div class="section_head">
+            <h1 class="section_title">
+                top creators
+            </h1>
+            <h2 class="section_subtitle">
+                Connect with our most popular and creative designers.
+            </h2>
+        </div>
+        <div class="section_content">
+            {% include "../_components/_xScroller.twig" with 'item' : tabs_items %}
+            {% include "../_components/_xScroller.twig" with 'item' : tabs_items %}
+        </div>
+    </div>
+</section>

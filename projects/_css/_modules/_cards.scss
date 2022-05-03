@@ -1,0 +1,236 @@
+.card {
+    box-shadow: 0.2rem 0.2rem 0.5rem 0rem rgba($black, 0);
+    @include transition(all, $time1);
+
+    &:hover {
+        cursor: pointer;
+        box-shadow: 0.3rem 0.2rem 0.5rem 0rem rgba($black, 0.65);
+
+        .card_container {
+            background: $white;
+        }
+
+        .card_preview {
+            img {
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    .card_container {
+        border: 0.2rem solid $black;
+        background: transparent;
+        @include transition(background-color, $time1);
+    }
+
+    .card_header,
+    .card_footer {
+        @include flex-between-center;
+    }
+
+    .card_title,
+    .card_author {
+        @include font-bold;
+    }
+
+    .card_title {
+        text-transform: capitalize;
+    }
+
+    .card_preview {
+        width: 100%;
+        aspect-ratio: 1;
+        overflow: hidden;
+        background: rgba($black, 0.25);
+
+        img {
+            opacity: 0.9;
+            filter: grayscale(0.075);
+            @include transition(transform, $time1);
+        }
+    }
+
+    .card_stat {
+        font-size: 1.2rem;
+        @include flex-col-start-center;
+
+        span {
+            font-size: 1.8rem;
+            @include font-bold;
+        }
+    }
+
+    // Dynamic
+    // ----------------------------------------
+    &.is-dynamic {
+        width: 100%;
+
+        .card_container {
+            padding: 1rem 0.8rem;
+        }
+
+        .card_header {
+            padding: 0 0 1rem;
+        }
+
+        .card_title {
+            font-size: 1.6rem;
+        }
+
+        .card_author {
+            font-size: 1rem;
+        }
+
+        .card_footer {
+            padding: 1rem 0;
+        }
+
+        .card_stat {
+            font-size: 0.7rem;
+
+            span {
+                font-size: 1rem;
+            }
+        }
+
+        .btn {
+            margin-top: 0;
+        }
+
+        .btn_container {
+            font-size: 1.2rem;
+        }
+    }
+
+    // Large
+    // ----------------------------------------
+    &.is-large {
+        width: calc(100% - 2.8rem);
+
+        .card_container {
+            padding: 2.4rem 2rem;
+        }
+
+        .card_header {
+            padding: 0 0 2rem;
+        }
+
+        .card_title {
+            font-size: 3rem;
+        }
+
+        .card_footer {
+            padding: 2rem 0;
+        }
+
+        .card_stat {
+            font-size: 1.4rem;
+
+            span {
+                font-size: 2rem;
+            }
+        }
+    }
+}
+
+// Responsive
+// ----------------------------------------
+// Devices > 560px
+@include smallTablet {
+    .card {
+        &.is-large {
+            max-width: 42rem;
+        }
+    }
+}
+
+// Devices > 720px
+@include largeTablet {
+    .card {
+        &.is-dynamic {
+            .card_container {
+                padding: 2.4rem 2rem;
+            }
+
+            .card_header {
+                padding: 0 0 2rem;
+            }
+
+            .card_title {
+                font-size: 3rem;
+            }
+
+            .card_footer {
+                padding: 2rem 0;
+            }
+
+            .card_stat {
+                font-size: 1rem;
+
+                span {
+                    font-size: 1.6rem;
+                }
+            }
+
+            .btn_container {
+                font-size: 1.6rem;
+            }
+        }
+    }
+}
+
+// Devices > 960px
+@include smallDesktop {
+    .card {
+        &:hover {
+            transform: scale(1.025);
+        }
+    }
+}
+
+// Devices > 1280px
+@include largeDesktop {
+    .card {
+        &.is-dynamic {
+            .card_author {
+                font-size: 1.4rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .card {
+        &.is-dynamic {
+            .card_title {
+                font-size: 1.4rem;
+            }
+
+            .card_author {
+                font-size: 0.8rem;
+            }
+
+            .card_stat {
+                font-size: 0.6rem;
+
+                span {
+                    font-size: 0.8rem;
+                }
+            }
+
+            .btn_container {
+                font-size: 1rem;
+            }
+        }
+
+        &.is-large {
+            .card_stat {
+                font-size: 1.2rem;
+
+                span {
+                    font-size: 1.6rem;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,32 @@
+{% set nav_items = [
+    {
+        "label": "Home",
+        "path": "home"
+    },
+    {
+        "label": "Market",
+        "path": "marketplace"
+    },
+    {
+        "label": "What is Wano ?",
+        "path": "becomeCreator"
+    },
+    {
+        "label": "Community",
+        "path": "community"
+    }
+] %}
+
+<nav class="nav is-main" arial-label="main">
+    <div class="nav_container">
+        <ul class="list">
+            {% for item in nav_items %}
+                <li class="list_item">
+                    <a class="list_itemLink" href="{{ item.path ? '#' ~ item.path : '' }}" title="{{ item.label }}">
+                        {{ item.label }}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</nav>

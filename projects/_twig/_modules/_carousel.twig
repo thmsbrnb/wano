@@ -1,0 +1,36 @@
+{% set carousel_items = [
+    {
+        "title": "create your artwork <span class='emoji'>🎨</span>",
+        "text": "Click <span class='is-bold'>my collections</span> and step up your collection. Add social links, a description, profile & banner images."
+    },
+    {
+        "title": "upload you NFT <span class='emoji'>🚀</span>",
+        "text": "Upload your work (image, video, audio or 3D art), add a title, description and customize your NFTs."
+    },
+    {
+        "title": "list them for sale <span class='emoji'>💸</span>",
+        "text": "Choose between auctions, fixed-price listings and declining-pricing listings."
+    }
+] %}
+
+<div class="carousel">
+    <button class="carousel_btn is-left is-hidden" style="display: none"></button>
+    <div class="carousel_tracker">
+        <button class="carousel_trackerBtn is-active">1</button>
+        <button class="carousel_trackerBtn">2</button>
+        <button class="carousel_trackerBtn">3</button>
+    </div>
+    <div class="carousel_container">
+        <ul class="carousel_list">
+            {% for item in carousel_items %}
+                <li class="carousel_item is-current">
+                    <div class="carousel_itemContent">
+                        <div class="carousel_itemTitle">{{ item.title }}</div>
+                        <p class="carousel_itemText">{{ item.text }}</p>
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <button class="carousel_btn is-right" style="display: none"></button>
+</div>

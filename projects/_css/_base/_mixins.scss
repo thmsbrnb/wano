@@ -1,0 +1,45 @@
+// Positions
+// ----------------------------------------
+@mixin flex-center-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-col-center-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-col-start-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+@mixin flex-between-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+// Text
+// ----------------------------------------
+@mixin text-ellipsis($width) {
+    width: $width;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+// Transitions
+// ----------------------------------------
+@mixin transition($property, $duration) {
+    transition-duration: $duration;
+    transition-property: $property;
+    will-change: $property;
+    animation-timing-function: $ease1;
+}

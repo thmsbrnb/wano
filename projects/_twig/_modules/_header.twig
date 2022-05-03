@@ -1,0 +1,12 @@
+{% set button = {
+    "label": "My Wallet<span class='alert'>4</span>",
+    "css_class": "is-primary"
+} %}
+
+<header class="header">
+    <div class="header_container">
+        {% include "../_components/_logo.twig" %}
+        {% include "../_components/_nav.twig" %}
+        {% include "../_components/_button.twig" with button %}
+    </div>
+</header>

@@ -1,0 +1,21 @@
+{% set section = {
+    "value": "home"
+} %}
+
+{% set button = {
+    "label": "explore",
+    "css_class": "is-primary"
+} %}
+
+<section class="section{{ section.value ? " is-" ~ section.value : "" }}" aria-label="{{ section.value ? section.value : "" }}" id="{{ section.value ? section.value : "" }}">
+    <div class="section_container">
+        <div class="section_content">
+            <h1>
+                collect super rare digital <span class="sheperd">artworks</span>
+            </h1>
+            <h2>Discover the best nft collections in the world on our site.</h2>
+            {% include "../_components/_button.twig" with button %}
+            {% include "../_components/_stat_bar.twig" %}
+        </div>
+    </div>
+</section>

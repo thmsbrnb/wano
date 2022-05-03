@@ -1,0 +1,30 @@
+.section {
+    &.is-topCreators {
+        .section_title {
+            margin-bottom: 2rem;
+        }
+
+        .section_subtitle {
+            margin-bottom: 6rem;
+        }
+
+        .xScroller {
+            &:first-child {
+                margin-bottom: 1rem;
+            }
+        }
+    }
+}
+
+// Responsive
+// ----------------------------------------
+// Devices > 960px
+@include smallDesktop {
+    .section {
+        &.is-topCreators {
+            .section_head {
+                text-align: center;
+            }
+        }
+    }
+}

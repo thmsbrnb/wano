@@ -1,0 +1,54 @@
+$breakpoints: (
+    smallTablet: 560px,
+    largeTablet: 720px,
+    smallDesktop: 960px,
+    largeDesktop: 1280px,
+);
+
+@mixin smallTablet {
+    @media screen and (min-width: map-get($breakpoints, smallTablet)) {
+        @content;
+    }
+}
+
+@mixin largeTablet {
+    @media screen and (min-width: map-get($breakpoints, largeTablet)) {
+        @content;
+    }
+}
+
+@mixin smallDesktop {
+    @media screen and (min-width: map-get($breakpoints, smallDesktop)) {
+        @content;
+    }
+}
+
+@mixin largeDesktop {
+    @media screen and (min-width: map-get($breakpoints, largeDesktop)) {
+        @content;
+    }
+}
+
+@mixin hover {
+    @media screen and (min-width: map-get($breakpoints, smallDesktop)) {
+        @content;
+    }
+}
+
+// Responsive
+// ----------------------------------------
+// Devices > 560px
+@include smallTablet {
+}
+
+// Devices > 720px
+@include largeTablet {
+}
+
+// Devices > 960px
+@include smallDesktop {
+}
+
+// Devices > 1280px
+@include largeDesktop {
+}

@@ -1,0 +1,32 @@
+.logo {
+    .logo_container {
+        padding-bottom: 0.6rem;
+        text-transform: uppercase;
+        line-height: 0.7;
+        font-size: 4.6rem;
+        @include font-bold;
+    }
+
+    &.is-secondary {
+        .logo_container {
+            padding: 1rem 1.6rem;
+            width: fit-content;
+            font-size: 3.6rem;
+            color: $white;
+            background: $black;
+        }
+    }
+}
+
+// Responsive
+// ----------------------------------------
+// Devices > 560px
+@include smallTablet {
+    .logo {
+        .logo_container {
+            padding-bottom: 0.5rem;
+            line-height: 0.8;
+            font-size: 3.2rem;
+        }
+    }
+}

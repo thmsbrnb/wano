@@ -1,0 +1,57 @@
+.section {
+    &.is-community {
+        padding-top: 6rem;
+
+        .section_container {
+            padding: 4rem 0 6rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: auto;
+            text-align: center;
+            color: $white;
+            background: $black;
+        }
+
+        .section_title {
+            margin-bottom: 4rem;
+        }
+
+        .btn {
+            z-index: 10;
+        }
+    }
+}
+
+// Responsive
+// ----------------------------------------
+// Devices > 960px
+@include smallDesktop {
+    .section {
+        &.is-community {
+            .section_container {
+                padding: 0 8rem;
+                height: math.div(100vh, 3);
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .section_title {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+// Devices > 1280px
+@include largeDesktop {
+    .section {
+        &.is-community {
+            .section_container {
+                padding: 0 12rem;
+            }
+        }
+    }
+}

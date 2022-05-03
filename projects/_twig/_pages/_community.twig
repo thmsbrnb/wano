@@ -1,0 +1,21 @@
+{% set section = {
+    "value": "community"
+} %}
+
+{% set button = {
+    "label": "launch discord",
+    "css_class": "is-secondary"
+} %}
+
+<section class="section{{ section.value ? " is-" ~ section.value : "" }}" aria-label="{{ section.value ? section.value : "" }}" id="{{ section.value ? section.value : "" }}">
+    <div class="section_container">
+        <div class="section_head">
+            <h1 class="section_title">
+                join our community
+            </h1>
+        </div>
+        <div class="section_content">
+            {% include "../_components/_button.twig" %}
+        </div>
+    </div>
+</section>

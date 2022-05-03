@@ -1,0 +1,27 @@
+{% set stat_items = [
+    {
+        "title": "32k+",
+        "subtitle": "artworks"
+    },
+    {
+        "title": "12k+",
+        "subtitle": "auctions"
+    },
+    {
+        "title": "24k+",
+        "subtitle": "artists"
+    }
+] %}
+
+<div class="statBar">
+    <div class="statBar_container">
+        <ul class="list">
+            {% for item in stat_items %}
+                <li class="list_item">
+                    <div class="list_itemTitle">{{ item.title }}</div>
+                    <div class="list_itemSubtitle">{{ item.subtitle }}</div>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>

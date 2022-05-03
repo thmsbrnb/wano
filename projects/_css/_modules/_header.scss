@@ -1,0 +1,93 @@
+.header {
+    z-index: 100;
+    padding: 0 1.4rem;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: $headerMobileHeight;
+    background: $white;
+    background: linear-gradient(
+        to right,
+        lighten($white, 4),
+        darken($white, 8)
+    );
+    @include transition(height, $time2);
+
+    &.is-small {
+        height: #{$headerMobileHeight - 4rem};
+
+        .header_container {
+            border-color: $black;
+        }
+    }
+
+    .header_container {
+        height: 100%;
+        border-bottom: 0.2rem solid transparent;
+        @include flex-between-center;
+        @include transition(border-color, $time2);
+    }
+
+    .btn {
+        display: none;
+
+        &.is-primary {
+            .btn_container {
+                background: darken($white, 6);
+            }
+        }
+    }
+
+    .btn_container {
+        position: relative;
+    }
+
+    .alert {
+        position: absolute;
+        top: -0.8rem;
+        right: 0.6rem;
+        display: grid;
+        place-items: center;
+        width: 1.6rem;
+        height: 1.6rem;
+        border: 0.2rem solid darken($white, 7);
+        border-radius: 100%;
+        font-size: 0.8rem;
+        color: $white;
+        background: $black;
+    }
+}
+
+// Responsive
+// ----------------------------------------
+// Devices > 560px
+@include smallTablet {
+    .header {
+        padding: 0 2rem;
+        height: $headerHeight;
+
+        &.is-small {
+            height: #{$headerHeight - 4rem};
+        }
+    }
+}
+
+// Devices > 720px
+@include largeTablet {
+    .header {
+        padding: 0 4rem;
+
+        .btn {
+            display: block;
+        }
+    }
+}
+
+// Devices > 1280px
+@include largeDesktop {
+    .header {
+        padding: 0 8rem;
+    }
+}

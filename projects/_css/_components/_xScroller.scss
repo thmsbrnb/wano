@@ -1,0 +1,26 @@
+.xScroller {
+    cursor: pointer;
+    margin-bottom: 2rem;
+    overflow: hidden;
+    overflow-x: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    .list {
+        display: flex;
+        gap: 0.4rem;
+        overscroll-behavior-inline: contain;
+        scroll-snap-type: inline mandatory;
+    }
+
+    &:last-child {
+        .list {
+            flex-direction: row-reverse;
+            justify-content: flex-end;
+        }
+    }
+}
+
+.xScroller::-webkit-scrollbar {
+    display: none;
+}

@@ -1,0 +1,27 @@
+{% set button = {
+    "label": "collect now",
+    "css_class": "is-tertiary"
+} %}
+
+<article class="card{{ item.css_class ? ' ' ~ item.css_class : '' }}">
+    <div class="card_container">
+        <header class="card_header">
+            <h1 class="card_title">{{ item.title ? item.title : 'Artwork' }}</h1>
+            <div class="card_author">{{ item.author ? '@' ~ item.author : '@author' }}</div>
+        </header>
+        <div class="card_preview">
+            <img src="{{ item.img }}">
+        </div>
+        <footer class="card_footer">
+            <div class="card_stat card_bid">
+                Current Bid
+                <span>{{ item.bid ? item.bid ~ ' ETH' : 'Unknown' }}</span>
+            </div>
+            <div class="card_stat card_time">
+                Remaining Time
+                <span>{{ item.time ? item.time : 'Ended' }}</span>
+            </div>
+        </footer>
+        {% include "../_components/_button.twig" with button %}
+    </div>
+</article>

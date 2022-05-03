@@ -1,0 +1,50 @@
+.nav {
+    &.is-main {
+        display: none;
+
+        .list {
+            display: flex;
+            align-items: center;
+        }
+
+        .list_itemLink {
+            position: relative;
+        }
+    }
+}
+
+// Responsive
+// ----------------------------------------
+// Devices > 720px
+@include largeTablet {
+    .nav {
+        &.is-main {
+            display: block;
+
+            .list {
+                gap: 2.4rem;
+            }
+
+            .list_itemLink {
+                font-size: 1.2rem;
+            }
+        }
+    }
+}
+
+// Devices > 960px
+@include smallDesktop {
+    .nav {
+        &.is-main {
+            display: block;
+
+            .list {
+                gap: 5rem;
+            }
+
+            .list_itemLink {
+                font-size: 1.4rem;
+            }
+        }
+    }
+}

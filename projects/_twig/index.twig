@@ -1,0 +1,20 @@
+{% extends '../_base.twig' %}
+
+{% set meta_title = 'Collect super rare digital artworks' %}
+
+{% block body %}
+    <main class="layout">
+        <div class="layout_container">
+            {% include "_modules/_header.twig" %}
+            {% include "_modules/_nav_mobile.twig" %}
+            {% include "_pages/_home.twig" %}
+            {% include "_pages/_trending.twig" %}
+            {% include "_pages/_marketplace.twig" %}
+            {% include "_pages/_top_creators.twig" %}
+            {% include "_pages/_become_creator.twig" %}
+            {% include "_pages/_community.twig" %}
+            {% include "_modules/_footer.twig" %}
+            {% include "_components/_modal.twig" %}
+        </div>
+    </main>
+{% endblock body %}

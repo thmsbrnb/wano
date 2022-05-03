@@ -1,0 +1,73 @@
+.tab {
+    width: fit-content;
+
+    &:hover {
+        .tab_container {
+            background: rgba($black, 0.075);
+        }
+    }
+
+    .tab_container {
+        padding: 1rem 1.4rem;
+        width: max-content;
+        border: 0.2rem solid $black;
+        border-radius: 1.8rem;
+        text-transform: capitalize;
+        white-space: nowrap;
+        color: $black;
+        background: transparent;
+        @include transition(all, $time1);
+    }
+
+    &.is-primary {
+        &.is-active {
+            .tab_container {
+                color: $white;
+                background: $black;
+            }
+
+            &:hover {
+                .tab_container {
+                    background: $black;
+                }
+            }
+        }
+
+        .tab_container {
+            font-size: 1.2rem;
+        }
+    }
+
+    &.is-secondary {
+        &.is-premium {
+            .tab_container {
+                background: $premium;
+            }
+        }
+
+        .tab_container {
+            font-size: 1.4rem;
+            @include flex-between-center;
+            @include font-bold;
+        }
+
+        .tab_img {
+            margin-right: 1rem;
+            width: 3.4rem;
+            height: 3.4rem;
+            border-radius: 100%;
+        }
+
+        .tab_info {
+            display: flex;
+            flex-direction: column;
+
+            span {
+                text-transform: none;
+                line-height: 1;
+                font-size: 0.9rem;
+                @include font-regular;
+            }
+        }
+    }
+}

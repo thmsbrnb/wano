@@ -1,0 +1,22 @@
+{% set button = {
+    "label": "confirm",
+    "css_class": "is-primary modal_trigger"
+} %}
+
+<div class="modal">
+    <div class="modal_container">
+        <div class="modal_overlay modal_trigger"></div>
+        <div class="modal_content">
+            <div class="emoji">🤩</div>
+            <div class="modal_title">Add it to your wallet ?</div>
+            <p class="modal_txt">
+                This item will be added to your wallet.
+                You can manage it later. 
+            </p>
+            <div class="modal_utils">
+                {% include "_button.twig" %}
+                <a class="modal_link modal_trigger" href="#!">Cancel</a>
+            </div>
+        </div>
+    </div>
+</div>

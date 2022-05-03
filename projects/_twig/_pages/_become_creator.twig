@@ -1,0 +1,19 @@
+{% set section = {
+    "value": "becomeCreator"
+} %}
+
+<section class="section{{ section.value ? " is-" ~ section.value : "" }}" aria-label="{{ section.value ? section.value : "" }}" id="{{ section.value ? section.value : "" }}">
+    <div class="section_container">
+        <div class="section_head">
+            <h1 class="section_title">
+                how to be creator ?
+            </h1>
+            <h2 class="section_subtitle">
+                Join the WANO community easily and make yourself known.
+            </h2>
+        </div>
+        <div class="section_content">
+            {% include "../_modules/_carousel.twig" %}
+        </div>
+    </div>
+</section>

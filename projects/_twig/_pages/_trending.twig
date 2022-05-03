@@ -1,0 +1,25 @@
+{% set section = {
+    "value": "trending"
+} %}
+
+{% set card_items = [
+    {
+        "title": "monkey#02",
+        "author": "mark",
+        "img": "../../assets/previews/nft_hero.webp",
+        "bid": "1.0324",
+        "time": "12:03:44",
+        "css_class": "is-large"
+    }
+] %}
+
+<section class="section{{ section.value ? " is-" ~ section.value : "" }}" aria-label="{{ section.value ? section.value : "" }}" id="{{ section.value ? section.value : "" }}">
+    <div class="section_container">
+        <div class="section_head">
+            <h1 class="section_title">Token of the <span class="sheperd">Week</span></h1>
+        </div>
+        {% for item in card_items %}
+            {% include "../_modules/_cards.twig" with "item": item %}
+        {% endfor %}
+    </div>
+</section>

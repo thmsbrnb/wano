@@ -1,0 +1,42 @@
+.statBar {
+    margin-top: 8rem;
+
+    .list {
+        display: flex;
+        gap: 3.2rem;
+    }
+
+    .list_itemTitle {
+        text-transform: uppercase;
+        font-size: 3.4rem;
+        @include font-bold;
+    }
+
+    .list_itemSubtitle {
+        text-transform: capitalize;
+        font-size: 1.2rem;
+    }
+}
+
+// Responsive
+// ----------------------------------------
+// Devices > 960px
+@include smallDesktop {
+    .statBar {
+        .list_itemTitle {
+            font-size: 4rem;
+        }
+
+        .list_itemSubtitle {
+            font-size: 1.2rem;
+        }
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .statBar {
+        .list_itemTitle {
+            font-size: 3rem;
+        }
+    }
+}

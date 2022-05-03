@@ -1,0 +1,135 @@
+.section {
+    &.is-trending {
+        margin: 0 -1.4rem;
+        padding-top: 4rem;
+
+        .section_container {
+            padding: 0 1.4rem 4rem;
+            position: relative;
+            height: 80vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            background: $black;
+        }
+
+        .section_head {
+            padding: 0 4rem 0 2rem;
+        }
+
+        .section_title {
+            text-transform: none;
+            color: $white;
+        }
+
+        h1 {
+            .sheperd {
+                &:after {
+                    background: url("../../../assets/icons/icon_sparkle_2.png")
+                        no-repeat;
+                    background-size: cover;
+                }
+            }
+        }
+
+        .card {
+            position: absolute;
+            bottom: 18rem;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(
+                    to right,
+                    rgba($white, 0.25),
+                    rgba(pink, 0.25)
+                ),
+                url("../../../assets/images/card_bg.webp") no-repeat;
+            background-size: cover;
+        }
+    }
+}
+
+// Responsive
+// ----------------------------------------
+// Devices > 560px
+@include smallTablet {
+    .section {
+        &.is-trending {
+            margin: 0;
+        }
+    }
+}
+
+// Devices > 720px
+@include largeTablet {
+    .section {
+        &.is-trending {
+            .section_container {
+                padding: 0 6rem 4rem;
+            }
+        }
+    }
+}
+
+// Devices > 960px
+@include smallDesktop {
+    .section {
+        &.is-trending {
+            .section_container {
+                height: 60vh;
+                justify-content: flex-start;
+                align-items: center;
+            }
+
+            .section_head {
+                padding: 0;
+            }
+
+            .section_title {
+                width: 50%;
+                text-align: left;
+                font-size: 6rem;
+            }
+
+            .card {
+                bottom: unset;
+                left: unset;
+                top: -10rem;
+                right: -14rem;
+                box-shadow: 0.2rem 0.2rem 0.5rem 0rem rgba($black, 0.5);
+            }
+        }
+    }
+}
+
+// Devices > 1280px
+@include largeDesktop {
+    .section {
+        &.is-trending {
+            .section_container {
+                padding: 0 12rem 4rem;
+            }
+
+            .card {
+                right: -8rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .section {
+        &.is-trending {
+            .section_container {
+                padding: 0 1.4rem 4rem;
+            }
+
+            .card {
+                bottom: 10rem;
+            }
+
+            .section_title {
+                font-size: 2rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,29 @@
+.mp {
+    .mp_container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-gap: 0.6rem;
+    }
+}
+
+// Responsive
+// ----------------------------------------
+// Devices > 560px
+@include smallTablet {
+    .mp {
+        .mp_container {
+            grid-gap: 2.8rem;
+        }
+    }
+}
+
+// Devices > 960px
+@include smallDesktop {
+    .mp {
+        .mp_container {
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+        }
+    }
+}
