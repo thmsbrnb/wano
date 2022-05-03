@@ -2,8 +2,6 @@
 
 For demonstrative purposes.
 
-Inspo : https://dribbble.com/shots/18115431-NFTs-Landing-Page
-
 ## **`🐒 What is WANO ?`**
 
 **WANO** is a market place for collecting NFTs and digital artworks. The application allows you to explore a wide range of works, become a creator and get in touch with the **WANO** community.
@@ -12,7 +10,7 @@ Inspo : https://dribbble.com/shots/18115431-NFTs-Landing-Page
 
 ## **`🚀 Challenge`**
 
-1- Produce the desktop version from a given graphic model.
+1- Produce the desktop version from a given graphic model (https://dribbble.com/shots/18115431-NFTs-Landing-Page).
 
 2 - Design the mobile version (bottom navigation, vertical layer, horizontal scrollers, etc...) and implement responsive functions.
 
