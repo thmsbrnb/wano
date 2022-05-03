@@ -3,7 +3,7 @@
 For demonstrative purposes.
 
 ![Mockup](assets/docs/mockup_desktop.png)
-![Mockup](assets/docs/mockup_mobile.png)
+![Mockup](assets/docs/mockup_mobile.png =253x117)
 
 ## **`🐒 What is WANO ?`**
 
@@ -31,18 +31,20 @@ For demonstrative purposes.
 Piece of code :
 
 ```twig
-<nav  class="nav is-main"  arial-label="main">
-	<div  class="nav_container">
-		<ul  class="list">
-			{% for  item in nav_items %}
-				<li  class="list_item">
-					<a href="{{ item.path  ? '#' ~  item.path  : '' }}"  title="{{ item.label }}" class="list_itemLink">
-						{{ item.label }}
-					</a>
-				</li>
-			{% endfor %}
-		</ul>
-	</div>
+<nav class="nav is-main" arial-label="main">
+    <div class="nav_container">
+        <ul class="list">
+            {% for item in nav_items %}
+                <li class="list_item">
+                    <a href="{{ item.path ? '#' ~ item.path : '' }}"
+                        title="{{ item.label }}"
+                        class="list_itemLink">
+                        {{ item.label }}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
 </nav>
 ```
 
