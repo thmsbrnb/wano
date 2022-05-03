@@ -35,9 +35,7 @@ Pieces of the cake :
         <ul class="list">
             {% for item in nav_items %}
                 <li class="list_item">
-                    <a href="{{ item.path ? '#' ~ item.path : '' }}"
-                        title="{{ item.label }}"
-                        class="list_itemLink">
+                    <a href="{{ item.path ? '#' ~ item.path : '' }} title="{{ item.label }}" class="list_itemLink">
                         {{ item.label }}
                     </a>
                 </li>
